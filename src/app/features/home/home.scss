@@ -1,11 +1,11 @@
 .hero {
   position: relative;
-  min-height: calc(100svh - 64px - 64px);
+  min-height: calc(100svh - var(--app-header-offset, 90px) - 64px);
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4.75rem 10% 1.5rem;
+  padding: 0 10% 1.5rem;
 }
 
 .hero-overlay {
@@ -183,7 +183,7 @@ blockquote {
 
 @media (max-width: 700px) {
   .hero {
-    padding: 5.75rem 6% 1.25rem;
-    min-height: calc(100svh - 96px - 72px);
+    padding: 0 6% 1.25rem;
+    min-height: calc(100svh - var(--app-header-offset, 110px) - 72px);
   }
 }

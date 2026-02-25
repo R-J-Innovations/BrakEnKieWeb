@@ -10,13 +10,15 @@
 
 .app-main {
   flex: 1 0 auto;
+
   /* Header is fixed, so give pages room at the top */
-  padding-top: 90px;
+  --app-header-offset: 90px;
+  padding-top: var(--app-header-offset);
 }
 
 @media (max-width: 700px) {
   .app-main {
-    padding-top: 110px;
+    --app-header-offset: 110px;
+    padding-top: var(--app-header-offset);
   }
 }
-
