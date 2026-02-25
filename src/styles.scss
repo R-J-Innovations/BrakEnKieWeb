@@ -29,6 +29,11 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Prevent the home hero from causing slight scroll due to 100vh rounding on mobile/desktop */
+body {
+  overflow-x: hidden;
+}
+
 section {
   padding: 8rem 10%;
 }
