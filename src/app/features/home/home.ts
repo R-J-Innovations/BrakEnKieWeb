@@ -1,6 +1,7 @@
 import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { APP_BASE_HREF } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -10,8 +11,15 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.scss'
 })
 export class HomeComponent implements AfterViewInit {
+  heroStyle: string;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    @Inject(APP_BASE_HREF) baseHref: string
+  ) {
+    const base = baseHref.endsWith('/') ? baseHref : baseHref + '/';
+    this.heroStyle = `url('${base}assets/hero.jpg') center/cover no-repeat`;
+  }
 
   ngAfterViewInit(): void {
 

@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser, APP_BASE_HREF } from '@angular/common';
 
 @Component({
   selector: 'app-puppies',
@@ -8,7 +8,17 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrl: './puppies.scss',
 })
 export class PuppiesComponent implements AfterViewInit {
-  constructor(@Inject(PLATFORM_ID) private platformId: object) {}
+  louisStyle: string;
+  amelieStyle: string;
+
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: object,
+    @Inject(APP_BASE_HREF) baseHref: string
+  ) {
+    const base = baseHref.endsWith('/') ? baseHref : baseHref + '/';
+    this.louisStyle = `url('${base}assets/louis.jpg')`;
+    this.amelieStyle = `url('${base}assets/amelie.jpg')`;
+  }
 
   ngAfterViewInit(): void {
     if (!isPlatformBrowser(this.platformId)) {
