@@ -33,6 +33,9 @@ jobs:
       - name: Build (GitHub Pages)
         run: npx ng build --configuration production --base-href "/${{ github.event.repository.name }}/"
 
+      - name: Copy index.html to 404.html
+        run: cp dist/BrakEnKieWeb/browser/index.html dist/BrakEnKieWeb/browser/404.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
