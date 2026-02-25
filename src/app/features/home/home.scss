@@ -3,6 +3,7 @@
   height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 10%;
 }
 
@@ -13,7 +14,7 @@
 }
 
 .hero-content {
-  margin-top: 150px;
+  margin-top: 0;
   position: relative;
   max-width: 1000px;
 }
@@ -36,10 +37,10 @@
 
 .hero-center {
   width: 100%;
-  margin-top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
   gap: 1.25rem;
 }
