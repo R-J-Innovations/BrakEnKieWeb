@@ -26,6 +26,33 @@ For a complete list of available schematics (such as `components`, `directives`,
 ng generate --help
 ```
 
+## Deploy to GitHub Pages
+
+This repo is configured to deploy via GitHub Actions to GitHub Pages.
+
+### One-time setup in GitHub
+
+1. Push to GitHub (default branch: `master`).
+2. In your repo, go to **Settings → Pages**.
+3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+
+### How it works
+
+- The workflow builds with a repository base path (for example `/BrakEnKieWeb/`).
+- Only the static output folder is deployed: `dist/BrakEnKieWeb/browser`.
+- Routing uses hash URLs so refresh/deep links work on GitHub Pages.
+
+Example URLs:
+
+- `https://<username>.github.io/BrakEnKieWeb/`
+- `https://<username>.github.io/BrakEnKieWeb/#/puppies`
+
+### Local GitHub Pages build
+
+```bash
+npm run build:gh-pages
+```
+
 ## Building
 
 To build the project run:
@@ -43,16 +70,6 @@ To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use th
 ```bash
 ng test
 ```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
 ## Additional Resources
 
