@@ -1,0 +1,36 @@
+.footer {
+  background: #ddb892;
+  padding: 1rem clamp(1rem, 5vw, 10%);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+}
+
+.footer-meta {
+  margin-top: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.footer-meta small {
+  display: inline-block;
+}
+
+@media (max-width: 700px) {
+  .footer-inner {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-meta {
+    text-align: center;
+  }
+}
