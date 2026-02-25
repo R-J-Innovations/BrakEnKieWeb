@@ -1,0 +1,58 @@
+.page {
+  padding: 8rem 2rem 4rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page-header {
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.puppy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.puppy-card {
+  text-align: center;
+}
+
+.puppy-card .image {
+  height: 400px;
+  background-color: #ddd;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 1.5rem;
+  transition: transform 0.5s ease;
+}
+
+.puppy-card:hover .image {
+  transform: scale(1.05);
+}
+
+.louis {
+  background-image: url('/assets/louis.jpg');
+}
+
+.amelie {
+  background-image: url('/assets/amelie.jpg');
+}
+
+.status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: #1f6f43;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.status.reserved {
+  background: #666;
+}
