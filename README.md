@@ -45,7 +45,7 @@ This repo is configured to deploy via GitHub Actions to GitHub Pages.
 Example URLs:
 
 - `https://<username>.github.io/BrakEnKieWeb/`
-- `https://<username>.github.io/BrakEnKieWeb/#/puppies`
+- `https://<username>.github.io/BrakEnKieWeb/puppies`
 
 ### Local GitHub Pages build
 
