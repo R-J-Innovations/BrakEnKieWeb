@@ -18,7 +18,10 @@ export class HomeComponent implements AfterViewInit {
     @Inject(APP_BASE_HREF) baseHref: string
   ) {
     const base = baseHref.endsWith('/') ? baseHref : baseHref + '/';
-    this.heroStyle = `url('${base}assets/hero.jpg') center/cover no-repeat`;
+
+    // Cache-bust hero image on deployments (GitHub Pages can aggressively cache assets).
+    const version = (globalThis as any).__APP_VERSION__ ?? Date.now();
+    this.heroStyle = `url('${base}assets/hero.jpg?v=${version}') center/cover no-repeat`;
   }
 
   ngAfterViewInit(): void {
