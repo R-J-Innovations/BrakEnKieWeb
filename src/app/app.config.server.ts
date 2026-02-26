@@ -7,8 +7,8 @@ import { serverRoutes } from './app.routes.server';
 const serverConfig: ApplicationConfig = {
   providers: [
     provideServerRendering(withRoutes(serverRoutes)),
-    { provide: APP_BASE_HREF, useValue: '/' }
-  ]
+    { provide: APP_BASE_HREF, useValue: '/' },
+  ],
 };
 
 export const config = mergeApplicationConfig(appConfig, serverConfig);

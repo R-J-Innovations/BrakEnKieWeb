@@ -4,6 +4,8 @@ import { AboutComponent } from './features/about/about';
 import { PuppiesComponent } from './features/puppies/puppies';
 import { ProcessComponent } from './features/process/process';
 import { ContactComponent } from './features/contact/contact';
+import { MerchListComponent } from './features/merch/merch-list/merch-list';
+import { MerchDetailComponent } from './features/merch/merch-detail/merch-detail';
 import { NotFoundComponent } from './features/not-found/not-found';
 
 export const routes: Routes = [
@@ -12,5 +14,7 @@ export const routes: Routes = [
   { path: 'puppies', component: PuppiesComponent },
   { path: 'process', component: ProcessComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'shop', component: MerchListComponent },
+  { path: 'shop/:slug', component: MerchDetailComponent },
   { path: '**', component: NotFoundComponent },
 ];

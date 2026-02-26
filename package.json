@@ -3,12 +3,15 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "dev": "ng serve",
+    "start": "node dist/BrakEnKieWeb/server/server.mjs",
     "build": "ng build",
     "build:gh-pages": "ng build --configuration production --base-href /BrakEnKieWeb/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:BrakEnKieWeb": "node dist/BrakEnKieWeb/server/server.mjs"
+    "test": "ng test"
+  },
+  "engines": {
+    "node": "20.x"
   },
   "prettier": {
     "printWidth": 100,
